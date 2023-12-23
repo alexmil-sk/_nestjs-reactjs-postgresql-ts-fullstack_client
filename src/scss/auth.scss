@@ -1,0 +1,7 @@
+.input {
+	border: 1px solid $slate-800!important;
+	box-shadow: none!important;
+	&:focus {
+		border-color: $slate-500!important;
+	}
+}

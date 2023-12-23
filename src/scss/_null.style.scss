@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none !important;
+}
+
+/*Меняем подсчет ширины блока так, чтобы нам было удобно верстать*/
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*Убираем линию обводки у некоторых ьраузеров*/
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*Перечисляем некоторые HTML тэги и добавляем им значение block, что делает их блочными*/
+nav,
+footer,
+header,
+fside {
+	display: block;
+}
+
+/*В HTML и BODY уровняем поведение шрифтов и элементов для разных браузеров, в том числе
+запрещабт самовольное увеличение шрифта на некоторых устройствах, напр. iPhone*/
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*Обращаемся к тэгам формы и просим их унаследовать свойства шрифта от родителя потому, что
+по умолчанию эти тэги не наследуют эти свойства.*/
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+/*Дополнительно обращаемся к некоторым тэгам, у которых есть особенности отображения в разных браузерах:
+- убирают крестик в input в IE;
+- убирают лишние отступы в Firefox для кнопок;
+- чистятся стили маркированных списков и т.д.*/
+input::-ms-clear {
+	display: none;
+} /*С помощью этой строки (псевдоэлемент ::-ms-clear{}) убирается крестик в поле ввода input в IE*/
+
+input {
+	border: none !important;
+}
+input:focus {
+	outline: none !important;
+}
+input[type="text"],
+input[type="password"] {
+	border: none;
+	outline: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+} /*С помощью этой строки (псевдоэлемент ::-moz-focus-inner{}) убираются лишние отступы и
+пробелы в кнопках в Firefox*/
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+/*Обнуляем стили всех заголовков*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+/*-----------------------------------------------------------*/

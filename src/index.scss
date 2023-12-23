@@ -1,0 +1,43 @@
+@import "./scss/main.scss";
+@import "react-toastify/dist/ReactToastify.css";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-sm;
+  }
+  td {
+    @apply capitalize text-white/70;
+  }
+  thead td {
+    @apply text-white;
+  }
+}
+@layer components {
+  .btn {
+    @apply flex gap-2 items-center text-white py-2 px-4 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-400;
+  }
+  .input {
+    @apply rounded-md bg-transparent p-2 border-2 border-slate-100 outline-none placeholder:text-sm placeholder:text-white/40  focus:border-slate-300;
+  }
+  .container {
+    @apply max-w-[1000px];
+  }
+}
+
+@layer utilities {
+  .btn-red {
+    @apply bg-rose-900 hover:bg-rose-800;
+  }
+  .btn-green {
+    @apply bg-green-600 justify-center hover:bg-green-800;
+  }
+  .btn-sky {
+    @apply bg-sky-800 hover:bg-sky-600;
+  }
+}
+
